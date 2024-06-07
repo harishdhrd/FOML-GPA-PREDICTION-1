@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static',filename='assets/logo.jpg')}}" type="image/x-icon">
+    <title>CSE DEPT GPA Prediction</title>
+</head>
+<body>
+    <h1 class="proj-title">STUDENT GPA PREDICTION</h1>
+    <div class="container-div predict-page prediction-container">
+        <form action="/" method="get">
+            <div class="student-card prediction-card">
+                    <!-- <img src="{{url_for('static',filename='assets/'+data[0]+'.jpg')}}" alt="" class="student-img"> -->
+                    <img src="{{url_for('static',filename='assets/'+'blank'+'.jpg')}}" alt="" class="student-img">
+                    <h4 class="roll-no-text">Register Number : {{data[0]}}</h4>
+                    <p class="roll-no-text">Predicted GPA : {{data[2]}}</p>
+                    <p class="roll-no-text">Actual GPA : {{data[1]}}</p>
+                    <button class="check-btn">Done</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static',filename='assets/logo.jpg')}}" type="image/x-icon">
+    <title>CSE DEPT GPA Prediction</title>
+</head>
+<body>
+    <h1 class="proj-title">STUDENT GPA PREDICTION</h1>
+    <div class="container-div predict-page">
+    <form action="/predict" method="post">
+        <div class="student-card">
+                <!-- <img src="{{url_for('static',filename='assets/'+data[0]+'.jpg')}}" alt="" class="student-img"> -->
+                <img src="{{url_for('static',filename='assets/'+'blank'+'.jpg')}}" alt="" class="student-img">
+                <h4 class="roll-no-text">Register Number : {{data[0]}}</h4>
+                <input type="text" name="reg_no" value="{{data[0]}}" class="hidden_reg_no">
+                <button class="check-btn">Predict</button>
+            
+        </div>
+    </form>
+    <form action="/internals" method="post">
+        <div class="student-card cat-card">
+                <h4 class="roll-no-text">CAT 1</h4>
+                {% for marks in data[2]['CAT 1'] %}
+                <div>
+                    {% for mark in marks %}
+                    <p>{{mark}} : {{marks[mark]}}</p>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            
+        </div>
+    </form>
+    <form action="/internals" method="post">
+        <div class="student-card cat-card">
+            <h4 class="roll-no-text">CAT 2</h4>
+            {% for marks in data[2]['CAT 2'] %}
+            <div>
+                {% for mark in marks %}
+                <p>{{mark}} : {{marks[mark]}}</p>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </form>
+    <form action="/internals" method="post">
+        <div class="student-card cat-card">
+            <h4 class="roll-no-text">CAT 3</h4>
+            {% for marks in data[2]['CAT 3'] %}
+            <div>
+                {% for mark in marks%}
+                <p>{{mark}} : {{marks[mark]}}</p>
+                {% endfor %}
+            </div>
+
+        {% endfor %}
+    </div>
+    </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+body{
+    text-align: center;
+    background-color: #313744;
+}
+
+.hidden_reg_no{
+    display: none;
+}
+
+
+.container-div{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.proj-title{
+    color: white;
+    font-weight: 800;
+}
+
+.prediction-container{
+    justify-content: center;
+}
+
+.student-card{
+    animation-name: opacity-ani;
+    animation-duration: 0s;
+    cursor: pointer;
+    opacity: 0.5;
+    /* transition: opacity 1s; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    width: 350px;
+    position: relative;
+    height: 450px;
+    background-color: #222C37;
+    margin: 1rem 1rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+}
+
+.student-card:hover{
+    opacity: 1;
+    transition: 1s;
+}
+
+
+.prediction-card{
+    height: 650px;
+    opacity: 1;
+}
+
+.cat-card{
+    opacity: 1;
+}
+
+.roll-no-text{
+    font-size: 1.4rem;
+    color: white;
+}
+
+
+.student-img{
+    margin-top: 1rem;
+    width: 90%;
+    height: 60%;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.check-btn{
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 0.7rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    /* transition: 1s; */
+    /* position: absolute; */
+    /* bottom: 1rem; */
+    background-color: #16DFFC;
+}
+
+.check-btn:hover{
+    /* transition: 1s; */
+    cursor: pointer;
+}
+
+.prediction-card .roll-no-text{
+    margin: 1rem;
+}
+
+/* @keyframes opacity-ani{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+} */
+
+/* colors - #16DFFC*/
+
+/* https://superdevresources.com/wp-content/uploads/2021/08/Maserati-Birdcage-Smart-App.jpg */

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static',filename='assets/logo.jpg')}}" type="image/x-icon">
+    <title>CSE DEPT GPA Prediction</title>
+</head>
+<body>
+    <h1 class="proj-title">STUDENT GPA PREDICTION</h1>
+    <div class="container-div">
+        {% for reg_ in reg_no_list %}
+        <form action="/internals" method="post">
+        <div class="student-card">
+            
+                <!-- <img src="{{url_for('static',filename='assets/'+reg_+'.jpg')}}" alt="" class="student-img"> -->
+                <img src="{{url_for('static',filename='assets/'+'blank'+'.jpg')}}" alt="" class="student-img">
+                <h4 class="roll-no-text">Register Number : {{reg_}}</h4>
+                <input type="text" name="reg_no" value="{{reg_}}" class="hidden_reg_no">
+                <button class="check-btn">Check</button>
+            
+        </div>
+    </form>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
